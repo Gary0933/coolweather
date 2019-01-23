@@ -20,10 +20,10 @@ public class Utility {
 
     //解析和处理服务器返回的省级数据
     public static boolean handleProvinceResponse(String response) {
-        if (!TextUtils.isEmpty(response)) {
+        if (!TextUtils.isEmpty(response)) {//TextUnit 系统自带的工具类
             try {
                 //解析数据
-                JSONArray allProvinces = new JSONArray(response);
+                JSONArray allProvinces = new JSONArray(response);//把接收到的JSON串传入JSON数组中
                 for (int i = 0; i < allProvinces.length(); i++) {
                     //组装成实体类对象
                     JSONObject provinceObject = allProvinces.getJSONObject(i);
